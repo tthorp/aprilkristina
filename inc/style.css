@@ -1,0 +1,63 @@
+/*RESET SOME THINGS*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+body {line-height:1;}
+ol, ul {list-style-type:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+:focus {outline:0;}
+ins {text-decoration:none;}
+del {text-decoration:line-through;}
+table {border-collapse:collapse;border-spacing: 0;}
+html {min-height:100%;margin-bottom: 1px;}/*gives a phantom scrollbar to firefox and other browsers so the page doesn't shift*/
+
+/*NOW FOR THE STYLES*/
+body{font-family: "minion-pro-1","minion-pro-2",sans-serif;font-size:62.5%;background-color:#95CA56;}
+	p {font-size:150%;margin:20px 20px 5px 0;line-height:1.5;}
+		.center{text-align:center;}
+		.content img.center {display:block;margin:5px auto;}
+		strong, .strong, .body_dark{font-weight:bold;color:#333;}
+		.headline{color: #93C3D5;font-weight: bold;font-size:170%;margin:20px 20px 5px 20px;}
+		.bigmessage{font-size:180%;color:#666;}
+		.body_indent {background-position:5px 50%;color:#999999;line-height:20px;}
+		.em{font-style:italic;}
+	li p{font-size:100%;}
+	h1,h2,h3,h4,h5,h6,.title{margin:40px 20px 5px 0;color:#712C91;}
+		h1 {font-size:3em;font-weight:normal;}
+		h2 {font-size:2.5em;font-weight:normal;}
+		h3 {font-size:2.2em;font-weight:normal;}
+		h4 {font-size:2em;font-weight:normal;}
+		h5 {font-size:1.5em;font-weight:normal;}
+		h6 {font-size:1em;font-weight:normal;}
+	strong{font-weight:bold;}
+	a, a:visited{text-decoration:none;color:#95CA56;display:inline-block;}
+	a:hover{text-decoration:underline;}
+	ul li, ol li{font-size:1.4em;line-height:1.5;}
+.superwrap{background:#FFF;}
+.wrap{width:800px;text-align:left;margin:0 auto;padding:15px 0 0 0;}
+.header{height:130px;width:100%;}
+	.logo{float:left;}
+	.menu{height:30px;float:right;margin:55px 0 0 0;}
+		.menu ul li.first{border:none;}
+		.menu ul li{float:left;font-size:1.7em; border-left:1px solid #712C91;}
+		.menu ul li a{text-decoration:none;display:block;color:#712C91;margin:0 10px 0 10px;}
+		.menu ul li a:hover{text-decoration:underline;}
+.content{width:800px;min-height:300px;padding:0 0 50px 0;}
+	.sidebar{float:left;width:315px;clear:both;text-align:right;}
+		p.title{font-size:3em;line-height:1.1;}
+		p.action{font-size:1.9em;line-height:1.1;}
+	.main{float:right;width:412px;margin-right:10px;}
+	.hidden{display:none;}
+	.small{font-weight:normal;font-size:80%;}
+	.left{float:left;}
+	.right{float:right;}
+	.clear{clear:both;}
+	.slideshow{position:relative;height:325px;width:412px;}
+	.slideshow .active{position:relative;z-index:10;}
+	.slideshow .slide{position:relative;display:none;}
+		.slideshow .slide img{display:block;margin:0 auto;/* for IE 6 */}
+		.slideshow .slide.active{display:block;}	
+
+.tagline{width:850px;margin:20px auto 10px auto;}
+.footer{background:#95CA56 url('site_img/foot_bg.gif') repeat-x;width:100%;font-size:90%;text-align:center;height:180px;}
+	.linkbar{color:#FFF;margin:0 auto 0 auto;padding:10px 0;}
+	.footer a, .footer a:visited{color:#FFF;font-weight:normal;}

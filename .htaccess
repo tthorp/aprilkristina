@@ -1,0 +1,34 @@
+RewriteEngine on
+# add www. to visitors who request the bare domain
+RewriteCond %{HTTP_HOST} ^aprilkristina.com
+RewriteRule (.*) http://www.aprilkristina.com/$1 [R=301,L]
+# /new added to both commands during development
+# If requested URL-path plus ".php" exists as a file
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+# Rewrite to append ".php" to extensionless URL-path
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+
+#custom error document
+ErrorDocument 404 /404.php
+
+# PHP error handling for production servers
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_flag log_errors on
+php_flag ignore_repeated_errors off
+php_flag ignore_repeated_source off
+php_flag report_memleaks on
+php_flag track_errors on
+php_value docref_root 0
+php_value docref_ext 0
+php_value error_log /var/www/aprilkristina.com/PHP_errors.log
+# [see footnote 3] # php_value error_reporting 999999999
+php_value error_reporting -1
+php_value log_errors_max_len 0
+
+<Files PHP_errors.log>
+ Order allow,deny
+ Deny from all
+ Satisfy All
+</Files>
